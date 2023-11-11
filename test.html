@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+  padding: none;
+  margin: 0 auto;
+  background-color: black;
+  color: white;
+}
+button{
+  background-color: antiquewhite;
+  color: blue;
+}
+div{
+  padding: 1%;
+  position: relative;
+}
+
+.reply{
+  left: 5%;
+  position: relative;
+  color: wheat;
+}
+
+input{
+  background-color: wheat;
+  color: black;
+}
+    </style>
+</head>
+<body>
+    <div>
+        <label htmlFor="MainPost">
+          This is main Post.
+        </label>
+        <button onclick="creatediv()" >Reply</button>
+        <br />
+        
+        </div>
+</body>
+<script>
+    var message;
+    function setmsg(){
+    var promptmessage = prompt("Enter your Message : ");
+    message = promptmessage;
+  }
+  function creatediv(){
+      setmsg();
+      const divBox = document.createElement("div");
+      divBox.classList.add("reply");
+      const cmt = document.createTextNode(message);
+      const butt = document.createElement("button");
+      butt.onClick =()=>{
+        creatediv();
+      } 
+      divBox.appendChild(cmt)
+      divBox.appendChild(butt)
+      document.querySelector('body').appendChild(divBox);
+      }
+
+</script>
+</html>

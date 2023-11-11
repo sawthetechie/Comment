@@ -1,0 +1,33 @@
+*{
+  padding: none;
+  margin: 0 auto;
+  background-color: black;
+  color: white;
+}
+button{
+  
+  background-color: antiquewhite;
+  color: blue;
+}
+div{
+  padding: 1%;
+  position: relative;
+}
+
+.reply{
+  left: 5%;
+  position: relative;
+  color: wheat;
+}
+
+.subreply{
+  left: 10%;
+}
+
+.reply button{
+  height: 1;
+}
+
+
+
+
